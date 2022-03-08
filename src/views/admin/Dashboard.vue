@@ -14,12 +14,12 @@ export default {
   },
   methods: {
     checkLogin() {
-      const loader = this.$loading.show();
       const token = document.cookie.replace(
         /(?:(?:^|.*;\s*)hexToken\s*=\s*([^;]*).*$)|^.*$/,
         '$1',
       );
       if (token) {
+        const loader = this.$loading.show();
         this.$http.defaults.headers.common.Authorization = `${token}`;
 
         this.$http
@@ -34,7 +34,6 @@ export default {
             this.$router.push('/login');
           });
       } else {
-        alert('請先登入。');
         this.$router.push('/login');
       }
     },

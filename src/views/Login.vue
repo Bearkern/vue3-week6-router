@@ -1,5 +1,5 @@
 <template>
-  <h2>登入頁面</h2>
+  <h2>登入後台頁面</h2>
   <div class="container mt-5">
     <div class="my-5 row justify-content-center">
       <Form class="col-md-6" v-slot="{ errors }" @submit="login">
